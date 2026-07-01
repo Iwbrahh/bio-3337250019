@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil - Nama Anda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Fauzi Nur Ibrahim</h1>
+    <p>Mahasiswa Informatika, Universitas Sultan Ageng Tirtayasa</p>
+</header>
+
+<main>
+    <section id="tentang">
+        <h2>Tentang Saya</h2>
+        <p>Halo Sobat Jawara!</p>
+        <p>Perkenalkan, saya adalah Mahasiswa Informatika angkatan 2025, dari Universitas Sultan Ageng Tirtayasa</p>
+        <p>Nama Panggilan : Ibra (Iwbrah)</p>
+        <p>NIM: 3337250019</p>
+        <p>Hobi saya adalah Membaca buku, dan menulis Esai</p>
+    </section>
+
+    <section id="skill">
+        <h2>Bahasa Pemrograman Favorit</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section id="riwayat">
+        <h2>Riwayat Pendidikan</h2>
+        <table border="1">
+            <tr>
+                <th>Tahun</th>
+                <th>Jenjang</th>
+            </tr>
+            <tr>
+                <td>2014 - 2020</td>
+                <td>SDN Sindangsari 1</td>
+            </tr>
+             <tr>
+                <td>2020 - 2023</td>
+                <td>SMPN 4 Pasarkemis</td>
+            </tr>
+             <tr>
+                <td>2023 - 2025</td>
+                <td>SMK Avicena Rajeg</td>
+            </tr>
+            <tr>
+                <td>2025 - sekarang</td>
+                <td>S1 Informatika, UNTIRTA</td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>Hubungi saya: fauzinuribrahim01@gmail.com</p>
+</footer>
+
+</body>
+</html>
