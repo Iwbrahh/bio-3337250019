@@ -1,0 +1,265 @@
+/* THEME */
+:root {
+    --primary: #2563EB;
+    --secondary: #0EA5E9;
+    --bg: #EAF1FB;
+    --white: #FFFFFF;
+    --text: #334155;
+    --border: #D7E3F3;
+    --shadow: 0 10px 30px rgba(15,23,42,.08);
+    --shadow-hover: 0 18px 45px rgba(37,99,235,.16);
+    --radius: 20px;
+    --transition: .35s ease;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    background: linear-gradient(180deg, #EDF4FF 0%, #E8EEF8 100%);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.5);
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--text) !important;
+    transition: .3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* MAIN GRID */
+.row {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+}
+
+/* Card Bootstrap Layout Alignment */
+main > div {
+    display: flex;
+}
+main > div > section {
+    width: 100%;
+}
+
+/* CARD / SECTION */
+section {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px; 
+    height: 100%;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    animation: fadeUp .6s ease;
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-left: 12px;
+    border-left: 5px solid var(--primary);
+    color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem; 
+    font-weight: 600;
+}
+
+.highlight {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+/* SKILL BADGE */
+.skill-list {
+    display: flex;         
+    flex-wrap: wrap;    
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.skill-list .badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+/* Flexbox membagi 2 kolom */
+    flex: 1 1 calc(50% - 15px); 
+    
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+
+.skill-list .badge:hover {
+    transform: translateY(-4px);
+}
+
+/* TABLE */
+.table {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table th {
+    background: var(--primary);
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background: #EAF3FF;
+}
+
+.table-center table {
+    width: min(750px, 100%);
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 35px;
+    background: var(--white);
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+footer h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+footer .btn {
+    margin-top: 15px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 35px 20px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    opacity: .9;
+    margin-bottom: 15px;
+}
+
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    transition: transform .4s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 45px;
+    }
+
+    .header-content {
+        flex-direction: row; 
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    .profile-photo {
+        width: 170px;
+        height: 170px;
+    }
+
+    section {
+        padding: 32px;
+    }
+
+    h2 {
+        font-size: 1.55rem;
+    }
+}
