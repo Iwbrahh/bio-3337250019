@@ -1,0 +1,418 @@
+/* THEME VARIABLES */
+:root {
+    --primary: #2563EB;
+    --secondary: #0EA5E9;
+    --bg: hsl(215, 68%, 95%);
+    --white: #FFFFFF;
+    --text: #334155;
+    --border: #D7E3F3;
+    --shadow: 0 10px 30px rgba(15,23,42,.08);
+    --shadow-hover: 0 18px 45px rgba(37,99,235,.16);
+    --radius: 20px;
+    --transition: .35s ease;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    background: linear-gradient(180deg, #EDF4FF 0%, #E8EEF8 100%);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* TRANSISI */
+.col-md-6, .col-md-12 {
+    transition: width 0.6s ease-in-out, flex 0.6s ease-in-out, max-width 0.6s ease-in-out !important;
+}
+body, section, .navbar, footer, .table, th, td, .list-group-item, .info-box, .nav-link {
+    transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out, border-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out, transform 0.35s ease !important;
+}
+
+/* TRANSISI FOTO PROFIL */
+.profile-photo {
+    transition: transform 0.4s ease, 
+                box-shadow 0.4s ease, 
+                border-color 0.6s ease-in-out !important;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.5);
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--text) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* --- KUSTOMISASI TOMBOL BURGER (MOBILE) --- */
+.navbar-toggler {
+    border: 1px solid rgba(37, 99, 235, 0.2) !important; /* Garis tepi tipis sewarna --primary */
+    padding: 6px 12px;
+    border-radius: 12px; /* Membuat sudutnya melengkung estetik */
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+/* Efek saat tombol burger di-hover/disentuh */
+.navbar-toggler:hover {
+    background: rgba(37, 99, 235, 0.1);
+    transform: scale(1.05); /* Sedikit membesar dengan halus */
+}
+
+/* Mengatur ukuran dan warna icon burger */
+.custom-burger {
+    color: var(--primary); /* Mengikuti warna utama webmu (Biru) */
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+
+/* MAIN GRID */
+.row {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+}
+
+/* Penyelarasan Tinggi Card Sejajar */
+main > div {
+    display: flex;
+}
+main > div > section {
+    width: 100%;
+}
+
+/* CARD / SECTION */
+section {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px; 
+    height: 100%;
+    box-shadow: var(--shadow);
+    animation: fadeUp .6s ease;
+}
+
+/* Efek Hover Card Terangkat */
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-left: 12px;
+    border-left: 5px solid var(--primary);
+    color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem; 
+    font-weight: 600;
+}
+
+.highlight {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+.info-box {
+    background: #F1F5F9;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+/* SKILL BADGE RESPONSIF FLEX */
+.skill-list {
+    display: flex;         
+    flex-wrap: wrap;       
+    gap: 10px;             
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.skill-list .badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 auto;        
+    width: auto;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    color: white !important;    
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.skill-list .badge.bg-warning {
+    color: #334155 !important;
+}
+
+.skill-list .badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* TABLE */
+.table {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table th {
+    background: var(--primary) !important;
+    color: white !important;
+}
+
+.table-hover tbody tr:hover td {
+    background: #EAF3FF !important;
+}
+
+.table-center table {
+    width: min(750px, 100%);
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 35px;
+    background: var(--white);
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+footer h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+footer .btn {
+    margin-top: 15px;
+}
+
+/* ANIMATION LOAD FIRST TIME */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 35px 20px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.header-content > div {
+    flex: 1 1 100%;
+    transition: flex 0.6s ease-in-out, text-align 0.6s ease-in-out;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem; 
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.profile-photo {
+    width: 140px; 
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+.profile-photo:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* DESIGN TOMBOL TOGGLE */
+#btnToggle {
+    padding: 8px 18px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#btnToggle:hover {
+    background-color: white;
+    color: var(--primary);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+    header {
+        padding: 45px;
+    }
+    .header-content {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .header-content > div {
+        flex: 1 1 0%; 
+    }
+    header h1 {
+        font-size: 3.2rem; 
+    }
+    .profile-photo {
+        width: 170px;
+        height: 170px;
+    }
+    section {
+        padding: 32px;
+    }
+    h2 {
+        font-size: 1.55rem;
+    }
+}
+
+/* DARK MODE */
+body.dark {
+    background: #121212 !important;
+    color: #e0e0e0 !important;
+
+    .navbar { background: rgba(30, 30, 30, 0.85) !important; border: 1px solid #444; }
+    .nav-link { color: #e0e0e0 !important; &:hover, &.active { color: var(--secondary) !important; } }
+    .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        background: rgba(42, 42, 42, 0.7) !important;
+    }
+    .navbar-toggler:hover {
+        background: rgba(14, 165, 233, 0.15) !important; 
+    }
+    .custom-burger {
+        color: var(--secondary) !important; 
+    }
+    
+    section, footer { background-color: #1e1e1e !important; border: 1px solid #333 !important; }
+    section { box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important; h2 { color: var(--secondary) !important; border-left: 5px solid var(--secondary) !important; } }
+    
+    .info-box, .list-group-item { background-color: #2a2a2a !important; color: #e0e0e0 !important; border-color: #444 !important; }
+    .profile-photo { border-color: #333 !important; }
+
+    .table { 
+        --bs-table-bg: #1e1e1e !important; --bs-table-color: #e0e0e0 !important; border-color: #444 !important; 
+        th { background-color: #0f3460 !important; color: white !important; border-color: #444 !important; }
+        td { background-color: #1e1e1e !important; color: #e0e0e0 !important; border-color: #444 !important; }
+    }
+    .table-hover tbody tr:hover td { background-color: #2c2c2c !important; color: #fff !important; }
+}
+
+/* --- SECTION FAKTA HARI INI --- */
+#fakta {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+}
+
+#fakta h2 {
+    color: white;
+    border-left: none;
+    justify-content: center;
+}
+
+#isi-fakta {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#btnRefresh {
+    padding: 10px 25px;
+    background: white;
+    color: var(--primary);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#btnRefresh:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+body.dark #fakta {
+    background: linear-gradient(135deg, #0f3460, #1a1a2e) !important;
+}
+
+body.dark #fakta h2 {
+    color: var(--secondary) !important;
+}
+
+body.dark #btnRefresh {
+    background: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark #btnRefresh:hover {
+    background: var(--secondary);
+    color: white;
+}
