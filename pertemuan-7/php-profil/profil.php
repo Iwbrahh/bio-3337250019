@@ -1,13 +1,13 @@
 <?php
 // === DATA MAHASISWA ===
 $mahasiswa = [
-    "nama"    => "Nama Lengkap Anda",
-    "nim"     => "NIM Anda",
+    "nama"    => "Fauzi Nur Ibrahim",
+    "nim"     => "3337250019",
     "prodi"   => "Informatika",
-    "angkatan"=> 2022,
-    "ipk"     => 3.85,
-    "email"   => "email@anda.com",
-    "github"  => "https://github.com/username-anda",
+    "angkatan"=> 2025,
+    "ipk"     => 4.00,
+    "email"   => "fauzinuribrahim01@gmail.com",
+    "github"  => "https://github.com/Iwbrahh",
     "skill"   => ["HTML", "CSS", "JavaScript", "PHP", "Git"],
     "bio"     => "Saya adalah mahasiswa Informatika UNTIRTA yang
                   bersemangat belajar teknologi web.",
